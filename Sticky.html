@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     table{
+  border-collapse: collapse;
+    width: 100%;
+}
+/* Sticky columns */
+.sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: white; /* Ensure sticky columns remain visible */
+}
+
+/* Highlight on hover */
+tr:hover {
+  background-color: lightgray;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+  text-align: left;
+}
+.sticky {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+    </style>
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <th class="sticky">Number</th>
+        <th class="sticky">Id</th>
+        <th>File Name</th>
+        <th>FileSize</th>
+        <th>File Typee</th>
+        <th>Key</th>
+        <!-- Add more headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="sticky">1</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">2</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">3</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">4</td>
+        <td class="sticky">5hfee760c</td>
+        <td>example.txt</td>
+        <td>16.882</td>
+        <td>String</td>
+        <td>User/12875</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">5</td>
+        <td class="sticky">78ee760c</td>
+        <td>example.txt</td>
+        <td>10.882</td>
+        <td>String</td>
+        <td>User/85345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">6</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>19.982</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">7</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">8</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">9</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+      <tr>
+        <td class="sticky">10</td>
+        <td class="sticky">2dee760c</td>
+        <td>example.txt</td>
+        <td>17.882</td>
+        <td>String</td>
+        <td>User/12345</td>
+        <!-- Add more data cells as needed -->
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    // Add hover effect for entire row including sticky columns
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      row.addEventListener('mouseover', () => {
+        row.classList.add('hovered');
+      });
+      row.addEventListener('mouseleave', () => {
+        row.classList.remove('hovered');
+      });
+    });
+  </script>
+</body>
+</html>
