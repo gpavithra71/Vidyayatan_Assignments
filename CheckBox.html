@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Box Assignment</title>
+<style>
+  Table{
+    margin: 50px;
+    background-color: white;
+    border: 20x solid black;
+}
+th,td{
+    padding: 15px;
+}
+tr{
+    border: 4px solid black;
+}
+body{
+    background-color: black;
+    position: relative;
+    top:50px;
+}
+#secondTable{
+    position: relative;
+    bottom: 415px;
+    left: 240px;
+}
+
+
+</style>
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th><input type="checkbox" onchange="highlightRow(this)"></th>
+            <th>Details</th>
+            <th>Full Name</th>
+            <!-- Add more columns as needed -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" onchange="highlightRow(this)"></td>
+            <td>Data1</td>
+            <td>Raheem</td>
+           
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><input type="checkbox" onchange="highlightRow(this)"></td>
+      <td>Data1</td>
+      <td>Van</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Billy</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Amalia</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Amanda</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Dejon</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Shaniya</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Ally</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Kristy</td>
+</tr>
+</tbody>
+<tbody>
+  <tr>
+    <td><input type="checkbox" onchange="highlightRow(this)"></td>
+    <td>Data1</td>
+    <td>Shayne</td>
+</tr>
+</tbody>
+
+</table>
+<table id="secondTable">
+  <thead>
+    <tr>
+      <th><input type="checkbox" onchange="highlightRow(this)"></th>
+      <th>Name</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="checkbox" onchange="highlightRow(this)"></td>
+      <td>Sansome Andryszczak</td>
+      <td>Indonesia</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><input type="checkbox" onchange="highlightRow(this)"></td>
+<td>Friedrich Agronski</td>
+<td>Finland</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><input type="checkbox" onchange="highlightRow(this)"></td>
+<td>Natalya Thirkettie</td>
+<td>DemocraticRepublic</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><input type="checkbox" onchange="highlightRow(this)"></td>
+<td>Kaleb Rawcliffe</td>
+<td>France</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><input type="checkbox" onchange="highlightRow(this)"></td>
+<td>Kelly Dermott</td>
+<td>Vietnam</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td><input type="checkbox" onchange="highlightRow(this)"></td>
+<td>Nicky Fleeman</td>
+<td>Sweden</td>
+</tr>
+</tbody>
+</table>
+<script>
+  let prevChecked = null;
+
+  function highlightRow(checkbox) {
+    const row = checkbox.parentNode.parentNode;
+    if (checkbox.checked) {
+      // Remove highlight from previously selected row
+      if (prevChecked && prevChecked !== checkbox) {
+        prevChecked.checked = false;
+        prevChecked.parentNode.parentNode.classList.remove('highlight');
+      }
+      // Add highlight to the selected row
+      row.classList.add('highlight');
+      prevChecked = checkbox;
+    } else {
+        // Remove highlight from the row if checkbox is unchecked
+        row.classList.remove('highlight');
+        prevChecked = null;
+      }
+    }
+  </script>
+  
+</body>
+</html>
